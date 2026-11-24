@@ -1,0 +1,94 @@
+{
+  "split": "test",
+  "receipts": 100,
+  "one_shot_example": "train-0069",
+  "configs": {
+    "rules": {
+      "normalised": {
+        "f1": 0.3298,
+        "f1_low": 0.2925,
+        "f1_high": 0.3729,
+        "precision": 0.8509,
+        "recall": 0.2045,
+        "receipts_fully_correct": 0.0
+      },
+      "strict": {
+        "f1": 0.2903,
+        "f1_low": 0.2533,
+        "f1_high": 0.3319,
+        "precision": 0.7491,
+        "recall": 0.1801,
+        "receipts_fully_correct": 0.0
+      },
+      "json_parse_rate": 1,
+      "schema_valid_rate": 1,
+      "per_field": {
+        "menu.nm": {
+          "gold": 251,
+          "precision": null,
+          "recall": 0.0
+        },
+        "menu.cnt": {
+          "gold": 220,
+          "precision": null,
+          "recall": 0.0
+        },
+        "menu.unitprice": {
+          "gold": 67,
+          "precision": null,
+          "recall": 0.0
+        },
+        "menu.price": {
+          "gold": 246,
+          "precision": null,
+          "recall": 0.0
+        },
+        "subtotal_price": {
+          "gold": 65,
+          "precision": 0.925,
+          "recall": 0.754
+        },
+        "discount_price": {
+          "gold": 6,
+          "precision": 0.25,
+          "recall": 0.167
+        },
+        "service_price": {
+          "gold": 12,
+          "precision": 0.727,
+          "recall": 0.667
+        },
+        "tax_price": {
+          "gold": 43,
+          "precision": 0.848,
+          "recall": 0.651
+        },
+        "total_price": {
+          "gold": 95,
+          "precision": 0.842,
+          "recall": 0.674
+        },
+        "cashprice": {
+          "gold": 67,
+          "precision": 0.868,
+          "recall": 0.687
+        },
+        "creditcardprice": {
+          "gold": 16,
+          "precision": 0.846,
+          "recall": 0.688
+        },
+        "changeprice": {
+          "gold": 56,
+          "precision": 0.844,
+          "recall": 0.482
+        }
+      }
+    }
+  },
+  "paired_f1": {},
+  "summary_fields_only_f1": {
+    "rules": 0.737
+  },
+  "error_detection": {}
+}
