@@ -10,12 +10,30 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "Kishor Hange" }]
+keywords = ["llm", "structured-extraction", "receipts", "cord", "ocr", "xgrammar", "pydantic"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = ["numpy>=1.24,<3", "pandas>=2.0,<4", "pyarrow>=14", "pydantic>=2.5,<3", "huggingface-hub>=0.24"]
+
+[project.urls]
+Homepage = "https://github.com/kishorhange111/llm-structured-extraction"
+Repository = "https://github.com/kishorhange111/llm-structured-extraction"
+Issues = "https://github.com/kishorhange111/llm-structured-extraction/issues"
 
 [project.optional-dependencies]
 llm = ["torch>=2.1,<3", "transformers>=4.45,<6", "accelerate>=0.30,<2", "xgrammar>=0.1.20"]
 ocr = ["rapidocr>=3,<4", "onnxruntime>=1.18", "pillow>=10"]
-dev = ["pytest>=8", "ruff>=0.6"]
+serve = ["fastapi>=0.115", "uvicorn>=0.30"]
+dev = ["pytest>=8", "ruff>=0.6", "httpx>=0.27"]
 
 [project.scripts]
 receiptx-ocr = "receiptx.ocr:main"
@@ -33,5 +51,6 @@ select = ["E", "F", "I", "B", "UP", "SIM"]
 ignore = ["E501", "B905", "SIM105", "SIM108"]
 
 [tool.pytest.ini_options]
+pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "-q"
