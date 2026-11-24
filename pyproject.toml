@@ -38,6 +38,7 @@ dev = ["pytest>=8", "ruff>=0.6", "httpx>=0.27"]
 [project.scripts]
 receiptx-ocr = "receiptx.ocr:main"
 receiptx-run = "receiptx.run:main"
+receiptx-serve = "receiptx.serve:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
